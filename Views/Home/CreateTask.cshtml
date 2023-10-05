@@ -10,8 +10,18 @@
 </head>
 <body>
     <header>
-        <p>Task Management page</p>
+        <p>Create Task page</p>
+
     </header>
+
+    <form >
+        <label for="fname">Task name:</label><br>
+        <input type="text" id="fname" name="fname" value="my task"><br>
+        <label for="lname">Set Completion date</label><br>
+        <input type="text" id="lname" name="lname" value="date"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EditTask">Edit Task</a></p>
    
 </body>
 </html>
