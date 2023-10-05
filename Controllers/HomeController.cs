@@ -27,6 +27,11 @@ namespace GroupProject.Controllers
             return View();
         }
 
+        public IActionResult ManageTask()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
