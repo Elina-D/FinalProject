@@ -29,7 +29,7 @@ namespace GroupProject.Controllers
 
         public IActionResult ManageTask()
         {
-            return View();
+            return View("TaskManagementPage");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
