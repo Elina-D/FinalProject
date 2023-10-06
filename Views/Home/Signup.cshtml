@@ -3,11 +3,6 @@
 *@
 @{
 }
-@{
-
-}
-
-
 <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -24,23 +19,40 @@
           integrity=
 "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
-    <title>Login</title>
+    <title>Sign up</title>
 </head>
 <body>
     <div class="container">
-        <h1>Sign In</h1>
-        <form>
-            <p>
-                <label>Username:</label>
-                <input type="text" name="userID" id="userID">
-            </p>
-            <p>
+        <h1>Sign up</h1>
+              
+            <form class="p-a-1 m-3"  method="post">                
+                <div asp-validation-summary="All"></div>                
+                <div class="form-group">                
+                    <p >Your name:</p>                
+                    <input class="form-control d-inline"  />                
+                </div>  
+                <div class="form-group">                
+                    <p >Your username:</p>                
+                    <input class="form-control"  />                
+                </div>
+                <div class="form-group">                
+                    <p >Your email:</p>                
+                    <input class="form-control"  />                
+                </div>   
+             
+                <p>
                 <label>Password:</label>
                 <input type="password" name="password" id="password" />
                 <i class="bi bi-eye-slash" id="togglePassword"></i>
             </p>
+            <p>
+                <label>Confirm Password:</label>
+                <input type="password" name="password" id="password" />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </p>
+           
             <button type="submit" id="submit" class="btn btn-primary">
-                Log In
+                Create account
             </button>
         </form>
     </div>
@@ -60,3 +72,6 @@
         });
     </script>
 </body>
+
+
+
