@@ -1,6 +1,4 @@
-﻿@model ProjectViewModel
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,10 +16,16 @@
     <div class="container">
         <form method="post" action="/Projects/Edit">
             <div class="form-group">
-                <label for="projectName">Project Name</label>
-                <input type="text" class="form-control" id="projectName" name="projectName" value="@Model.ProjectName">
-            </div
+                <label for="projectName">Project Name</label><br>
+                <input type="text" id="projectName" name="projectName" value="my project"><br>
+                <label for="lname">Edit the start date</label><br>
+                <input type="text" id="lname" name="lname" value="start date"><br>
+                <label for="lname">Edit the end date</label><br>
+                <input type="text" id="lname" name="lname" value="end date"><br><br>
+
+            </div>
             <button type="submit" class="btn btn-primary">Save Changes</button>
+            <input type="submit" value="Delete Project">
         </form>
     </div>
 </body>
