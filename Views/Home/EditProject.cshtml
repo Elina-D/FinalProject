@@ -1,0 +1,28 @@
+﻿@model ProjectViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Project - Project Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GroupProject.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <p>Edit Project</p>
+    </header>
+
+    <div class="container">
+        <form method="post" action="/Projects/Edit">
+            <div class="form-group">
+                <label for="projectName">Project Name</label>
+                <input type="text" class="form-control" id="projectName" name="projectName" value="@Model.ProjectName">
+            </div
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>
