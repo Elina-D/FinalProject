@@ -3,25 +3,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Project - Project Management</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GroupProject.styles.css" asp-append-version="true" />
+    <!-- ... (head content) ... -->
 </head>
 <body>
     <header>
-        <p>Edit Project</p>
+        <p>Create Project</p>
     </header>
 
     <div class="container">
-        <form method="post" action="/Projects/Edit">
+        <form method="post" action="/Projects/Create">
             <div class="form-group">
                 <label for="projectName">Project Name</label>
                 <input type="text" class="form-control" id="projectName" name="projectName" value="@Model.ProjectName">
             </div>
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description">@Model.Description</textarea>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" class="form-control" id="startDate" name="startDate" value="@Model.StartDate.ToString("yyyy-MM-dd")">
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" class="form-control" id="endDate" name="endDate" value="@Model.EndDate.ToString("yyyy-MM-dd")">
+            </div>
+            <button type="submit" class="btn btn-primary">Create Project</button>
         </form>
     </div>
 </body>
