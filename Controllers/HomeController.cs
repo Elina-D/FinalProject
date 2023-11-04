@@ -31,6 +31,14 @@ namespace GroupProject.Controllers
         {
             return View("TaskManagementPage");
         }
+        public IActionResult EditProject()
+        {
+            return View("EditProject");
+        }
+        public IActionResult CreateProject()
+        {
+            return View("CreateProject");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
