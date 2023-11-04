@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Task Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GroupProject.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <p>Create Task page</p>
+
+    </header>
+
+    <form >
+        <label for="fname">Task name:</label><br>
+        <input type="text" id="fname" name="fname" value="my task"><br>
+        <label for="lname">Set Completion date</label><br>
+        <input type="text" id="lname" name="lname" value="date"><br><br>
+        <input type="submit" value="Submit">
+        
+    </form>
+    <p>
+    <form action="/Home/EditTask" method="get">
+        <input type="submit" value="Edit Task">
+    </form>
+    </p>
+
+    <p>
+    <form action="/Home/Tasks" method="get">
+        <input type="submit" value="Show tasks">
+    </form>
+    </p>
+
+</body>
+</html>

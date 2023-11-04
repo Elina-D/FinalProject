@@ -33,7 +33,15 @@ namespace GroupProject.Controllers
 
         public IActionResult ManageTask()
         {
-            return View("TaskManagementPage");
+            return View("CreateTask");
+        }
+        public IActionResult Tasks()
+        {
+            return View("Tasks");
+        }
+        public IActionResult EditTask()
+        {
+            return View("EditTask");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
