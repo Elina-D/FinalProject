@@ -20,8 +20,19 @@
         <label for="lname">Set Completion date</label><br>
         <input type="text" id="lname" name="lname" value="date"><br><br>
         <input type="submit" value="Submit">
+        
     </form>
-    <p><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EditTask">Edit Task</a></p>
-   
+    <p>
+    <form action="/Home/EditTask" method="get">
+        <input type="submit" value="Edit Task">
+    </form>
+    </p>
+
+    <p>
+    <form action="/Home/Tasks" method="get">
+        <input type="submit" value="Show tasks">
+    </form>
+    </p>
+
 </body>
 </html>

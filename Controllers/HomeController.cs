@@ -31,6 +31,10 @@ namespace GroupProject.Controllers
         {
             return View("CreateTask");
         }
+        public IActionResult Tasks()
+        {
+            return View("Tasks");
+        }
         public IActionResult EditTask()
         {
             return View("EditTask");
