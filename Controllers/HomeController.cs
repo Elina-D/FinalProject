@@ -26,6 +26,10 @@ namespace GroupProject.Controllers
         {
             return View();
         }
+        public IActionResult Signup()
+        {
+            return View();
+        }
 
         public IActionResult ManageTask()
         {
