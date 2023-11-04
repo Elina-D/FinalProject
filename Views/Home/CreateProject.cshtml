@@ -1,35 +1,53 @@
-﻿@model ProjectViewModel
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (head content) ... -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Task Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GroupProject.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <p>Create Project</p>
+        <p>Create Project page</p>
+
     </header>
 
-    <div class="container">
-        <form method="post" action="/Projects/Create">
-            <div class="form-group">
-                <label for="projectName">Project Name</label>
-                <input type="text" class="form-control" id="projectName" name="projectName" value="@Model.ProjectName">
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="description">@Model.Description</textarea>
-            </div>
-            <div class="form-group">
-                <label for="startDate">Start Date</label>
-                <input type="date" class="form-control" id="startDate" name="startDate" value="@Model.StartDate.ToString("yyyy-MM-dd")">
-            </div>
-            <div class="form-group">
-                <label for="endDate">End Date</label>
-                <input type="date" class="form-control" id="endDate" name="endDate" value="@Model.EndDate.ToString("yyyy-MM-dd")">
-            </div>
-            <button type="submit" class="btn btn-primary">Create Project</button>
+    <form>
+        <label for="fname">Project name:</label><br>
+        <input type="text" id="fname" name="fname" value="my project"><br>
+        <label for="fname">Project description:</label><br>
+        <input type="text" id="fname" name="fname" value="description"><br>
+        <label for="lname">Set the start date</label><br>
+        <input type="text" id="lname" name="lname" value="start date"><br><br>
+        <label for="lname">Set the end date</label><br>
+        <input type="text" id="lname" name="lname" value="end date"><br><br>
+        <input type="submit" value="Submit">
+        <h2>Add Tasks</h2>
+        <p>Add tasks to your project:</p>
+        <div class="form-group">
+            <label for="taskName">Task name:</label>
+            <input type="text" id="taskName" name="taskName" placeholder="Task Name">
+        </div>
+        <input type="button" value="Add Task" onclick="addTask()"><br><br>
+        <div id="taskList">
+        </div>
+
+        <input type="submit" value="Submit">
+
+    </form>
+    <p>
+        <form action="/Home/EditProject" method="get">
+            <input type="submit" value="Edit Project">
         </form>
-    </div>
+    </p>
+
+    <p>
+        <form action="/Home/Projects" method="get">
+            <input type="submit" value="Show projects">
+        </form>
+    </p>
+
 </body>
 </html>
